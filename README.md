@@ -44,4 +44,4 @@ Cloud dashboard to monitor public hazards.
 
 Watch the working demo of HazardSense_AI detecting hazards and giving voice alerts:
 
-[Click here to watch demo video](docs/demo/hazardsense_demo.mp4)
+[Click here to watch demo video](docs/demo/demo_video.mp4)
