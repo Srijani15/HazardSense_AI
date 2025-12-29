@@ -1,5 +1,5 @@
-from vision import get_hazard_alerts
-from voice_alerts import speak_warnings
+from src.vision import get_hazard_alerts
+from src.voice_alerts import speak_warnings
 
 def run_demo(image_path):
     """

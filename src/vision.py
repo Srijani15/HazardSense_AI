@@ -1,14 +1,20 @@
-# vision.py
+import cv2
+from src.hazard_engine import assess_hazards
 
-from hazard_engine import assess_hazards
+def detect_objects(image_path):
+    """
+    Load an image and return detected objects (mocked for now)
+    """
+    img = cv2.imread(image_path)
+    if img is None:
+        return []
 
-def mock_detect_objects():
-    # Simulated detections (replace with Azure Vision later)
-    return ["staircase", "wet floor"]
+    return ["staircase", "vehicle", "wet floor"]
 
-if __name__ == "__main__":
-    objects = mock_detect_objects()
-    warnings = assess_hazards(objects)
-
-    for w in warnings:
-        print(w)
+def get_hazard_alerts(image_path):
+    """
+    Return hazard alerts (message + score) for a given image
+    """
+    objects = detect_objects(image_path)
+    hazards = assess_hazards(objects)
+    return hazards
