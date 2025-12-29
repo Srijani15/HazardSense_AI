@@ -1,106 +1,42 @@
-HazardSense-AI
-Context-Aware Hazard Detection Assistant for the Visually Impaired
-🧩 Problem Statement
+# HazardSense-AI
 
-For visually impaired individuals, the biggest risk while moving independently is not knowing what objects exist, but which situations are dangerous.
+## Helping Visually Impaired People Navigate Safely
 
-Most existing AI assistants focus on describing the environment:
+While helping my visually impaired cousin, I realized most apps tell you “what” is around you, but not “what’s dangerous.” HazardSense-AI focuses on **hazard awareness first** — stairs, wet floors, vehicles, or other obstacles — and gives short, clear voice alerts.
 
-“There is a staircase.”
-“There is a road.”
-
-However, this information alone is not enough. What actually matters is:
-
-Is the staircase slippery?
-
-Is there a vehicle approaching?
-
-Is there a hazard that needs immediate attention?
-
-Missing such context can lead to accidents and injuries.
-
-💡 Our Solution
-
-HazardSense-AI is a safety-first AI assistant that prioritizes hazard awareness over scene description.
-
-Instead of narrating everything in front of the user, the system:
-
-Identifies potentially dangerous elements in the surroundings
-
-Assesses the level of risk using contextual reasoning
-
-Provides short, clear, actionable voice warnings
+### How It Works
+1. A camera captures the environment (mocked for now).  
+2. Detected objects are passed to our **hazard engine**.  
+3. The engine prioritizes risks and generates short warnings.  
+4. Voice alerts inform the user in real-time.
 
 Example alerts:
+- “Warning: stairs ahead!”  
+- “Caution: slippery floor.”  
+- “No immediate hazards detected.”
 
-“Warning. Slippery stairs detected ahead.”
+### Tech Stack
+- Python  
+- OpenCV (mocked image input)  
+- PyTTSX3 for voice alerts  
+- Rule-based hazard assessment  
 
-“Caution. Vehicle detected nearby.”
-
-“No immediate hazards detected.”
-
-The goal is to help visually impaired users make safer decisions in real-time.
-
-⚙️ How It Works
-
-An image is captured from the user’s environment
-
-Visual elements are detected using an AI vision model
-
-Detected objects are passed through a hazard assessment engine
-
-Safety-critical risks are identified and prioritized
-
-Voice alerts are generated to guide the user
-
-This approach focuses on what can cause harm, not just what exists.
-
-🛠️ Technologies Used
-
-Python
-
-Computer Vision (mocked for MVP, extendable to Azure Computer Vision)
-
-Rule-based + AI-assisted hazard reasoning
-
-Text-to-Speech (extendable to Azure Speech Services)
-
-📁 Project Structure
+### Folder Structure
 HazardSense-AI/
 ├── src/
-│   ├── vision.py
-│   ├── hazard_engine.py
-│   └── voice_alerts.py
+│ ├── vision.py
+│ ├── hazard_engine.py
+│ └── voice_alerts.py
 ├── assets/
-│   └── demo_images/
+│ └── demo_images/
 ├── docs/
 ├── README.md
 └── requirements.txt
 
-🌍 Impact
+### Future Improvements
+- Real-time video detection with Azure Computer Vision  
+- Bluetooth or bone-conduction audio output  
+- Distance estimation for hazards  
+- Indoor navigation for smart buildings  
 
-Improves independent mobility for visually impaired individuals
-
-Reduces accident risk through early hazard warnings
-
-Encourages accessibility-first and safety-focused AI design
-
-🚀 Future Scope
-
-Real-time video processing using a wearable camera
-
-Distance estimation for better risk assessment
-
-Bluetooth or bone-conduction audio output
-
-Multilingual voice alerts
-
-Integration with Azure AI services for scalability
-
-Smart city and indoor navigation support
-
-🤝 Why This Matters
-
-HazardSense-AI is not just an object detection system — it is a decision-support assistant designed with safety, inclusion, and real-world usability in mind.
-
-By shifting focus from scene description to risk awareness, this project aims to make AI more meaningful and practical for accessibility use cases.
+HazardSense-AI is simple, safe, and demonstrates a **practical application of AI for accessibility**.
