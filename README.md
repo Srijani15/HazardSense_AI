@@ -19,6 +19,7 @@ A simple AI tool to help visually impaired people navigate safely. It detects ha
 venv\Scripts\activate   # Windows
 # or
 source venv/bin/activate  # Mac/Linux
+
 Run the demo:
 
 python test_run.py
