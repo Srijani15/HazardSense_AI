@@ -20,13 +20,13 @@ venv\Scripts\activate   # Windows
 # or
 source venv/bin/activate  # Mac/Linux
 
-Run the demo:
+2. Run the demo:
 
 python test_run.py
 
-Console prints detected hazards with scores.
+- Console prints detected hazards with scores.
 
-Voice alerts announce hazards automatically.
+- Voice alerts announce hazards automatically.
 
 ## Next Steps / Future Plans
 Real-time camera detection.
