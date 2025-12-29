@@ -38,3 +38,10 @@ Wearable or mobile app integration.
 Multi-language voice alerts.
 
 Cloud dashboard to monitor public hazards.
+
+
+## 🎥 Demo Video
+
+Watch the working demo of HazardSense_AI detecting hazards and giving voice alerts:
+
+[Click here to watch demo video](docs/demo/hazardsense_demo.mp4)
