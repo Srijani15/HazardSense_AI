@@ -1,23 +1,26 @@
-# hazard_engine.py
-
 def assess_hazards(detected_objects):
     """
-    detected_objects: list of strings
-    returns: list of hazard warnings
+    Assess hazards and prioritize them.
+    Returns a list of tuples: (hazard_message, risk_score)
     """
+    hazard_rules = {
+        "staircase": (10, "Warning: stairs ahead!"),
+        "vehicle": (9, "Caution: vehicle nearby!"),
+        "wet floor": (7, "Alert: slippery surface!"),
+        "pole": (5, "Caution: obstacle at head level!"),
+        "open drain": (8, "Danger: open drain ahead!")
+    }
 
-    hazards = []
+    warnings = []
 
-    if "staircase" in detected_objects:
-        hazards.append("Warning. Stairs ahead. Please proceed carefully.")
+    for obj in detected_objects:
+        if obj in hazard_rules:
+            score, msg = hazard_rules[obj]
+            warnings.append((msg, score))
 
-    if "vehicle" in detected_objects:
-        hazards.append("Caution. Vehicle detected nearby.")
+    warnings.sort(key=lambda x: x[1], reverse=True)
 
-    if "wet floor" in detected_objects:
-        hazards.append("Alert. Slippery surface detected.")
+    if not warnings:
+        warnings.append(("No immediate hazards detected.", 0))
 
-    if not hazards:
-        hazards.append("No immediate hazards detected.")
-
-    return hazards
+    return warnings
