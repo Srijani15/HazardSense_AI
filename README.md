@@ -22,7 +22,9 @@ source venv/bin/activate  # Mac/Linux
 Run the demo:
 
 python test_run.py
+
 Console prints detected hazards with scores.
+
 Voice alerts announce hazards automatically.
 
 ## Next Steps / Future Plans
